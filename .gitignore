@@ -34,3 +34,6 @@ vscode/
 *.rar
 *.tar
 *.zip
+
+#SSH Key
+deploy_key

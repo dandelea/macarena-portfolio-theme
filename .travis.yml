@@ -1,9 +1,9 @@
+
 language: php
 sudo: false
-# Use this to prepare your build for testing.
-# e.g. copy database configurations, environment variables, etc.
-# Failures in this section will result in build status 'errored'.
-before_script:
+before_install:
+  - openssl aes-256-cbc -K $encrypted_dfdcfd5172af_key -iv $encrypted_dfdcfd5172af_iv -in deploy_key.enc -out ./deploy_key -d
+install:
   - npm install
   # Install JSCS: JavaScript Code Style checker
   # @link http://jscs.info/
@@ -12,15 +12,21 @@ before_script:
   # @link http://jshint.com/docs/
   - npm install -g jshint
   - wget https://develop.svn.wordpress.org/trunk/.jshintrc
+before_script:
   # Search theme for PHP syntax errors.
   - find . \( -name '*.php' \) -exec php -lf {} \;
   # Run the theme through JSHint
   - jshint .
   # Run the theme through JavaScript Code Style checker
   - jscs .
-
 # Run test script commands.
 # Default is specific to project language.
 # All commands must exit with code 0 on success. Anything else is considered failure.
 script:
   - echo 'testing...'
+after_success:
+  - eval "$(ssh-agent -s)"
+  - chmod 600 ./deploy_key
+  - echo -e "Host $SERVER_IP_ADDRESS\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - ssh-add ./deploy_key
+  - ssh -i ./deploy_key $SERVER_USER@$SERVER_IP_ADDRESS pwd
