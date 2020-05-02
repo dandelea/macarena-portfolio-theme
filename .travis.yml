@@ -20,4 +20,4 @@ after_success:
 - echo -e "Host $SERVER_IP_ADDRESS\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - ssh-add ./deploy_key
 - ssh -t $SERVER_USER@$SERVER_IP_ADDRESS "mkdir -p /opt/bitnami/apps/wordpress/htdocs/wp-content/themes/macarena-portfolio-theme"
-- rsync -avr --exclude='deploy_key' . $SERVER_USER@$SERVER_IP_ADDRESS:/opt/bitnami/apps/wordpress/htdocs/wp-content/themes/macarena-portfolio-theme/
+- rsync -avr --exclude='deploy_key' --exclude='.git' . $SERVER_USER@$SERVER_IP_ADDRESS:/opt/bitnami/apps/wordpress/htdocs/wp-content/themes/macarena-portfolio-theme/
