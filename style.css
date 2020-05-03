@@ -1750,7 +1750,7 @@ Tags: blog, e-commerce, portfolio, grid-layout, one-column      , two-columns, t
   .cwp-scroll-up-sticky.cwp-shrink-animation .cwp-main-header,
   .cwp-scroll-up-sticky.cwp-shrink-animation .cwp-bottom-header,
   .cwp-scroll-up-sticky.cwp-shrink-animation.cwp-dynamic-header {
-    padding: 5px 0;
+    /*padding: 5px 0;*/
     height: auto;
     -webkit-transition: all 0.5s ease-in-out 0s;
     -moz-transition: all 0.5s ease-in-out 0s;
@@ -1824,7 +1824,7 @@ Tags: blog, e-commerce, portfolio, grid-layout, one-column      , two-columns, t
     .cwp-scroll-up-sticky.cwp-shrink-animation .cwp-main-header .navigation ul li a,
     .cwp-scroll-up-sticky.cwp-shrink-animation .cwp-bottom-header .navigation ul li a,
     .cwp-scroll-up-sticky.cwp-shrink-animation.cwp-dynamic-header .navigation ul li a {
-      font-size: 13px; }
+      /*font-size: 13px;*/ }
   
   @-webkit-keyframes animate-scroll-down {
     0% {
