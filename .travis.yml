@@ -5,9 +5,6 @@ before_install:
   -in deploy_key.enc -out deploy_key -d
 install:
 - npm install
-- npm install -g jscs
-- npm install -g jshint
-- wget https://develop.svn.wordpress.org/trunk/.jshintrc
 before_script:
 - find . \( -name '*.php' \) -exec php -lf {} \;
 - jshint .
