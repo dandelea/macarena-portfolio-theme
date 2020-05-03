@@ -5,10 +5,6 @@ before_install:
   -in deploy_key.enc -out deploy_key -d
 install:
 - npm install
-before_script:
-- find . \( -name '*.php' \) -exec php -lf {} \;
-- jshint .
-- jscs .
 script:
 - echo 'testing...'
 after_success:
