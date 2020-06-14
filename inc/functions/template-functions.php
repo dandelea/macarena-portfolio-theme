@@ -873,12 +873,12 @@ if (!function_exists('cosmoswp_meta_collection')) :
                 );
                 echo '<span class="posted-on"><i class="'.esc_attr(cosmoswp_get_correct_fa_font('far fa-calendar-alt')).'"></i> ' . $posted_on . '</span>'; // WPCS: XSS OK.
             }
-            elseif ('author' == $element) {
+            /*elseif ('author' == $element) {
                 printf(
                     '%s',
                     '<span class="author vcard"><i class="'.esc_attr(cosmoswp_get_correct_fa_font('far fa-user')).'"></i><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
                 );
-            }
+            }*/
             elseif ('categories' == $element) {
 
                 $categories_list = get_the_category_list(esc_html__(', ', 'cosmoswp'));
