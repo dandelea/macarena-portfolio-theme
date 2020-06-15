@@ -1800,7 +1800,7 @@ Tags: blog, e-commerce, portfolio, grid-layout, one-column      , two-columns, t
     .cwp-scroll-up-sticky.cwp-shrink-animation .cwp-main-header .cwp-logo .custom-logo,
     .cwp-scroll-up-sticky.cwp-shrink-animation .cwp-bottom-header .cwp-logo .custom-logo,
     .cwp-scroll-up-sticky.cwp-shrink-animation.cwp-dynamic-header .cwp-logo .custom-logo {
-      -webkit-transition: transform 0.5s ease-in-out 0s;
+      /*-webkit-transition: transform 0.5s ease-in-out 0s;
       -moz-transition: transform 0.5s ease-in-out 0s;
       -ms-transition: transform 0.5s ease-in-out 0s;
       -o-transition: transform 0.5s ease-in-out 0s;
@@ -1812,7 +1812,7 @@ Tags: blog, e-commerce, portfolio, grid-layout, one-column      , two-columns, t
       -webkit-transform-origin: left;
       -moz-transform-origin: left;
       -ms-transform-origin: left;
-      transform-origin: left; }
+      transform-origin: left;*/ }
     .cwp-header-sticky.cwp-shrink-animation .cwp-top-header .navigation ul li a,
     .cwp-header-sticky.cwp-shrink-animation .cwp-main-header .navigation ul li a,
     .cwp-header-sticky.cwp-shrink-animation .cwp-bottom-header .navigation ul li a, .cwp-header-sticky.cwp-shrink-animation.cwp-dynamic-header .navigation ul li a,
